@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Stock Gainers</title>
+</h:head>
+<h:body>
+    <h:form>
+        <p:dataTable value="#{stockGainerBean.gainers}" var="gainer">
+            <p:column headerText="Symbol">
+                #{gainer.symbol}
+            </p:column>
+            <p:column headerText="Company Name">
+                #{gainer.companyName}
+            </p:column>
+            <p:column headerText="Last Price">
+                #{gainer.lastPrice}
+            </p:column>
+            <p:column headerText="Change %">
+                #{gainer.changePercentage}
+            </p:column>
+        </p:dataTable>
+    </h:form>
+</h:body>
+</html>
